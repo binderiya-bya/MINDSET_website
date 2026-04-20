@@ -5,10 +5,11 @@ permalink: /model/
 eyebrow: Documentation
 ---
 
-**MINDSET** is global, demand-driven, recursively dynamic macroeconometric simulation model. It evaluates how climate
+**MINDSET** is a global, demand-driven, recursively dynamic macroeconometric simulation model. 
+It stands for *Model of Innovation in Dynamic Low-Carbon Structural
+Economic and Employment Transformations*. MINDSET evaluates how climate
 change, climate policies, and other development and trade policies affect
-macroeconomic, sector-level, and labour market outcomes. MINDSET stands for *Model of Innovation in Dynamic Low-Carbon Structural
-Economic and Employment Transformations*.
+macroeconomic, sector-level, and labour market outcomes. 
 
 ### Goal
 
@@ -37,7 +38,7 @@ historically observed relationships — determine behavioural dynamics. The
 model is grounded empirically rather than assuming perfect information or
 rationally optimising behaviour.
 
-## Documentation
+### Documentation
 
 Full documentation is published on SSRN:
 

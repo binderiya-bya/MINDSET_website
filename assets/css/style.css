@@ -118,7 +118,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   padding: clamp(56px, 9vw, 96px) 0 clamp(48px, 8vw, 88px);
   background:
     radial-gradient(60% 80% at 85% 0%, rgba(138,90,43,.08), transparent 60%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+    linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
   border-bottom: 1px solid var(--rule);
 }
 .home-hero .eyebrow { margin-bottom: 1.1em; }
