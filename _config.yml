@@ -8,10 +8,9 @@ author: MINDSET Project
 email:
 
 # Build settings
-# When deploying under https://<user>.github.io/MINDSET_website/, set baseurl below to "/MINDSET_website".
-# When deploying to a root domain (user/organization site, or custom domain), leave baseurl empty.
-baseurl: ""
-url: ""
+# Deploying at https://binderiya-bya.github.io/MINDSET_website/
+baseurl: "/MINDSET_website"
+url: "https://binderiya-bya.github.io/MINDSET_website/"
 
 markdown: kramdown
 highlighter: rouge
