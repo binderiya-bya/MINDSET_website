@@ -298,3 +298,166 @@ section.block.alt { background: var(--bg-alt); }
 @media (max-width: 620px) {
   .footer-wrap { grid-template-columns: 1fr; gap: 28px; }
 }
+
+/* ---------- Footer disclaimer ---------- */
+.footer-disclaimer {
+  grid-column: 1 / -1;
+  border-top: 1px solid #2b3649;
+  padding-top: 20px;
+  color: #8a93a5;
+  font-size: .82rem;
+  line-height: 1.6;
+}
+.footer-disclaimer strong { color: #c7ccd6; font-weight: 600; }
+.footer-disclaimer p { color: inherit; margin: 0; max-width: 80ch; }
+
+/* ---------- Publications page ---------- */
+
+/* Filter bar */
+.pub-filter {
+  display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center;
+  padding: 14px 18px;
+  margin: 0 0 28px;
+  max-width: 840px;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+.pub-filter-label {
+  margin: 0; font-weight: 600; color: var(--ink); font-size: .9rem;
+  text-transform: uppercase; letter-spacing: .1em;
+}
+.pub-chk {
+  display: inline-flex; align-items: center; gap: 8px;
+  cursor: pointer; user-select: none;
+  font-size: .95rem; color: var(--ink-soft);
+  padding: 4px 0;
+}
+.pub-chk input {
+  appearance: none; -webkit-appearance: none;
+  width: 18px; height: 18px;
+  border: 1.5px solid var(--muted);
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  display: grid; place-items: center;
+  transition: background .1s ease, border-color .1s ease;
+}
+.pub-chk input:checked {
+  background: var(--ink); border-color: var(--ink);
+}
+.pub-chk input:checked::after {
+  content: ""; width: 6px; height: 10px;
+  border: solid #fff; border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.pub-chk:hover { color: var(--ink); }
+.pub-chk input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Cards */
+.publications { display: grid; gap: 20px; max-width: 840px; }
+.pub-card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  box-shadow: var(--shadow);
+}
+.pub-head { margin: 0; }
+.pub-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  background: #eee8dc;
+  color: var(--accent-ink);
+  border: 1px solid #e0d8c5;
+}
+.pub-tag-report       { background: #e4ecf4; color: #29486e; border-color: #cfdae8; }
+.pub-tag-academic-paper { background: #e7e3ef; color: #4a3a6f; border-color: #d6d0e2; }
+.pub-title { font-size: 1.2rem; margin: 10px 0 4px; }
+.pub-meta  { color: var(--muted); font-size: .88rem; margin: 0 0 10px; }
+.pub-desc  { color: var(--ink-soft); margin: 0 0 16px; }
+
+.pub-actions {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+}
+.pub-actions .btn { padding: 8px 16px; font-size: .88rem; }
+.pub-actions .btn.is-active {
+  background: var(--ink); color: #fff; border-color: var(--ink);
+}
+
+/* Expandable panels */
+.pub-panel {
+  margin-top: 18px; padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+.pub-panel h4 {
+  font-family: var(--sans);
+  font-size: .78rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .12em;
+  color: var(--accent); margin: 0 0 8px;
+}
+.pub-panel p { color: var(--ink-soft); margin: 0 0 0.4em; }
+
+.cite-group { margin-bottom: 16px; }
+.cite-group:last-child { margin-bottom: 0; }
+.cite-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 6px;
+}
+.cite-head h4 { margin: 0; }
+.cite-text {
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: .92rem;
+  color: var(--ink);
+  margin: 0;
+}
+.cite-code {
+  background: #1a2332;
+  color: #e8e5dd;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
+  font-size: .82rem;
+  line-height: 1.55;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre;
+}
+
+.btn-mini {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .1s ease, color .1s ease, border-color .1s ease;
+}
+.btn-mini:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.btn-mini.is-copied { background: #2d6a4f; color: #fff; border-color: #2d6a4f; }
+
+.pub-empty {
+  padding: 24px; text-align: center;
+  color: var(--muted);
+  background: var(--bg-alt);
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+  max-width: 840px;
+}
+
+@media (max-width: 620px) {
+  .pub-card { padding: 20px; }
+  .pub-actions .btn { flex: 1 1 calc(50% - 6px); text-align: center; }
+}

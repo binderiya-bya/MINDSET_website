@@ -1,0 +1,77 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Documentation</p>
+    <h1>Publications</h1>
+    <p class="lede">Documentation, reports, and academic papers on MINDSET 2.0 — hosted on SSRN.</p>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="container">
+
+    {% assign all_types = "Documentation,Report,Academic paper" | split: "," %}
+
+    <form class="pub-filter" aria-label="Filter publications by type">
+      <p class="pub-filter-label">Show:</p>
+      {% for t in all_types %}
+        <label class="pub-chk">
+          <input type="checkbox" data-type="{{ t }}" checked>
+          <span>{{ t }}{% if t == "Documentation" %}s{% elsif t == "Report" %}s{% else %}s{% endif %}</span>
+        </label>
+      {% endfor %}
+    </form>
+
+    <div class="publications" id="publications">
+      {% for pub in site.data.publications %}
+        <article class="pub-card" data-type="{{ pub.type }}" id="{{ pub.id }}">
+          <header class="pub-head">
+            <span class="pub-tag pub-tag-{{ pub.type | slugify }}">{{ pub.type }}</span>
+            <h3 class="pub-title">{{ pub.title }}</h3>
+            <p class="pub-meta">
+              {{ pub.authors_short }} · {{ pub.month }} {{ pub.year }}
+            </p>
+            <p class="pub-desc">{{ pub.description }}</p>
+          </header>
+
+          <div class="pub-actions">
+            <a class="btn btn-primary" href="{{ pub.ssrn_url }}" target="_blank" rel="noopener">View on SSRN</a>
+            <button type="button" class="btn btn-ghost js-toggle" data-target="abs-{{ pub.id }}" aria-expanded="false" aria-controls="abs-{{ pub.id }}">Abstract</button>
+            <button type="button" class="btn btn-ghost js-toggle" data-target="cite-{{ pub.id }}" aria-expanded="false" aria-controls="cite-{{ pub.id }}">Cite</button>
+          </div>
+
+          <div class="pub-panel" id="abs-{{ pub.id }}" hidden>
+            <h4>Abstract</h4>
+            <p>{{ pub.abstract }}</p>
+          </div>
+
+          <div class="pub-panel" id="cite-{{ pub.id }}" hidden>
+            <div class="cite-group">
+              <div class="cite-head">
+                <h4>APA</h4>
+                <button type="button" class="btn btn-mini js-copy" data-copy="apa-{{ pub.id }}">Copy</button>
+              </div>
+              <p class="cite-text" id="apa-{{ pub.id }}">{{ pub.apa }}</p>
+            </div>
+            <div class="cite-group">
+              <div class="cite-head">
+                <h4>BibTeX</h4>
+                <button type="button" class="btn btn-mini js-copy" data-copy="bib-{{ pub.id }}">Copy</button>
+              </div>
+              <pre class="cite-code" id="bib-{{ pub.id }}">{{ pub.bibtex | escape }}</pre>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <p class="pub-empty" hidden>No publications match the selected filters.</p>
+
+  </div>
+</section>
+
+<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>

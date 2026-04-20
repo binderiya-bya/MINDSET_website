@@ -1,0 +1,97 @@
+# Publications list. Each entry powers one card on /publications/.
+# type: one of "Documentation" | "Report" | "Academic paper"
+# The filter bar hides/shows cards based on type.
+#
+# BibTeX strings use | (literal block scalar) so line breaks are preserved.
+# APA strings should be one line.
+
+- id: mindset-model-2026
+  type: Documentation
+  title: MINDSET 2.0 Model Documentation
+  authors_short: Kiss-Dobronyi, Brancher, Dorband, Pollitt, Byambasuren, Lin, Hartvig, Lehr
+  year: 2026
+  month: February
+  description: Structure, theoretical underpinnings, mechanisms, and practical considerations of MINDSET 2.0.
+  ssrn_url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6188978
+  abstract: >-
+    MINDSET 2.0 is a global, demand-driven, recursively dynamic macroeconometric
+    simulation model that is used to evaluate how climate change, climate
+    policies, and other development and trade policies affect macroeconomic,
+    sector-level, and labour market outcomes. The goal of MINDSET is to provide
+    actionable policy advice and to enable informed decisions that are tailored
+    to country-specific opportunities and risks, while adopting a
+    whole-of-economy and people-centred strategy. This document provides a
+    comprehensive review of MINDSET 2.0, including theoretical underpinnings,
+    mechanisms, and practical considerations.
+  apa: >-
+    Kiss-Dobronyi, B., Brancher, M., Dorband, I. I., Pollitt, H., Byambasuren, B.,
+    Lin, X., Hartvig, Á. D., &amp; Lehr, U. (2026). MINDSET 2.0 Model Documentation.
+    SSRN. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6188978
+  bibtex: |
+    @misc{kissdobronyi2026mindset,
+      title        = {{MINDSET 2.0 Model Documentation}},
+      author       = {Kiss-Dobronyi, Bence and Brancher, Marco and Dorband, Ira Irina
+                      and Pollitt, Hector and Byambasuren, Binderiya and Lin, Xinru
+                      and Hartvig, {\'A}ron D{\'e}nes and Lehr, Ulrike},
+      year         = {2026},
+      month        = feb,
+      howpublished = {SSRN working paper},
+      url          = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6188978}
+    }
+
+- id: mindset-data-2025
+  type: Documentation
+  title: Data Documentation for MINDSET 2.0 Parametrization
+  authors_short: Brancher, Kiss-Dobronyi, Byambasuren, Lin, Hartvig, Dorband, Pollitt, Lehr
+  year: 2025
+  month: August
+  description: Data sources and data transformations used to build the global dataset for estimation.
+  ssrn_url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6206398
+  abstract: >-
+    This document provides an overview of the data sources and data
+    transformations that were used to prepare a global dataset for estimating
+    behavioral parameters for the MINDSET 2.0 model.
+  apa: >-
+    Brancher, M., Kiss-Dobronyi, B., Byambasuren, B., Lin, X., Hartvig, Á. D.,
+    Dorband, I. I., Pollitt, H., &amp; Lehr, U. (2025). Data Documentation for
+    MINDSET 2.0 Parametrization. SSRN. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6206398
+  bibtex: |
+    @misc{brancher2025data,
+      title        = {{Data Documentation for MINDSET 2.0 Parametrization}},
+      author       = {Brancher, Marco and Kiss-Dobronyi, Bence and Byambasuren, Binderiya
+                      and Lin, Xinru and Hartvig, {\'A}ron D{\'e}nes and Dorband, Ira Irina
+                      and Pollitt, Hector and Lehr, Ulrike},
+      year         = {2025},
+      month        = aug,
+      howpublished = {SSRN working paper},
+      url          = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6206398}
+    }
+
+- id: mindset-estimation-2025
+  type: Documentation
+  title: "Estimation of Behavioral Parameters for the MINDSET 2.0 Model: Methodology and Results"
+  authors_short: Brancher, Byambasuren, Kiss-Dobronyi, Lin, Hartvig, Dorband, Pollitt, Lehr
+  year: 2025
+  month: August
+  description: Estimation choices and discussion of estimated behavioural parameters for MINDSET 2.0.
+  ssrn_url: https://papers.ssrn.com/abstract=6213498
+  abstract: >-
+    This document provides a review of the estimation of behavioural parameters
+    for the MINDSET 2.0 model, including estimation choices and a discussion of
+    estimated parameters.
+  apa: >-
+    Brancher, M., Byambasuren, B., Kiss-Dobronyi, B., Lin, X., Hartvig, Á. D.,
+    Dorband, I. I., Pollitt, H., &amp; Lehr, U. (2025). Estimation of Behavioral
+    Parameters for the MINDSET 2.0 Model: Methodology and Results. SSRN.
+    https://papers.ssrn.com/abstract=6213498
+  bibtex: |
+    @misc{brancher2025estimation,
+      title        = {{Estimation of Behavioral Parameters for the MINDSET 2.0 Model: Methodology and Results}},
+      author       = {Brancher, Marco and Byambasuren, Binderiya and Kiss-Dobronyi, Bence
+                      and Lin, Xinru and Hartvig, {\'A}ron D{\'e}nes and Dorband, Ira Irina
+                      and Pollitt, Hector and Lehr, Ulrike},
+      year         = {2025},
+      month        = aug,
+      howpublished = {SSRN working paper},
+      url          = {https://papers.ssrn.com/abstract=6213498}
+    }

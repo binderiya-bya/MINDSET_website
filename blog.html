@@ -1,0 +1,31 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Notes &amp; commentary</p>
+    <h1>Blog</h1>
+    <p class="lede">Longer-form notes, methodological discussion, and commentary from the MINDSET team.</p>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="container">
+    {% assign posts = site.blog | sort: "date" | reverse %}
+    {% if posts.size > 0 %}
+      <div class="ann-index">
+        {% for post in posts %}
+          <article class="ann-item">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            {% if post.subtitle %}<p class="excerpt">{{ post.subtitle }}</p>{% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No blog posts yet — check back soon.</p>
+    {% endif %}
+  </div>
+</section>

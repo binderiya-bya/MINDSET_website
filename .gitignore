@@ -9,5 +9,7 @@ Gemfile.lock
 node_modules/
 *.log
 
-# Reports are hosted on SSRN — local PDF copies are not deployed.
+# Publications are hosted on SSRN — local PDF copies are not deployed.
 assets/pdfs/
+docs/
+*.pdf
