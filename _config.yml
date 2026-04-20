@@ -1,0 +1,50 @@
+# Site settings
+title: MINDSET 2.0
+tagline: A structural model for macroeconomic policy analysis
+description: >-
+  MINDSET 2.0 is a macroeconomic model for research and policy analysis.
+  This site hosts the model documentation, reports, and announcements.
+author: MINDSET Project
+email:
+
+# Build settings
+# When deploying under https://<user>.github.io/MINDSET_website/, set baseurl below to "/MINDSET_website".
+# When deploying to a root domain (user/organization site, or custom domain), leave baseurl empty.
+baseurl: ""
+url: ""
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
+# GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Announcements live in _posts by convention. Pagination is intentionally
+# omitted — jekyll-paginate only paginates index.html, and announcements.html
+# lists all posts directly. Add jekyll-paginate-v2 on a self-hosted Jekyll
+# deployment if pagination is needed later.
+
+# Navigation — used by _includes/nav.html
+navigation:
+  - title: Home
+    url: /
+  - title: The MINDSET Model
+    url: /model/
+  - title: Reports
+    url: /reports/
+  - title: Announcements
+    url: /announcements/
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - DEPLOY.md
+  - README.md
+  - assets/pdfs

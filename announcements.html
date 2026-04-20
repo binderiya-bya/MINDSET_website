@@ -1,0 +1,30 @@
+---
+layout: default
+title: Announcements
+permalink: /announcements/
+---
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">News</p>
+    <h1>Announcements</h1>
+    <p class="lede">Release notes, events, and updates from the MINDSET team.</p>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="container">
+    {% if site.posts.size > 0 %}
+      <div class="ann-index">
+        {% for post in site.posts %}
+          <article class="ann-item">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <p class="excerpt">{{ post.excerpt | strip_html | truncate: 220 }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No announcements yet — check back soon.</p>
+    {% endif %}
+  </div>
+</section>

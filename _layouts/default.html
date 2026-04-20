@@ -1,0 +1,11 @@
+---
+---
+{% include head.html %}
+<body class="layout-{{ page.layout | default: 'page' }}">
+  {% include nav.html %}
+  <main id="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

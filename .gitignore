@@ -1,0 +1,13 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
+.DS_Store
+node_modules/
+*.log
+
+# Reports are hosted on SSRN — local PDF copies are not deployed.
+assets/pdfs/
